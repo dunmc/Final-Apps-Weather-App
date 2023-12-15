@@ -24,8 +24,8 @@
         </button>
       </ion-col>
       <ion-col size="8">
-      <ion-label>
-        {{article.author}}
+        <ion-label [ngClass]="{'red-text': article.author}">
+          {{article.author}}
         <p>{{article.publishedAt | date}}</p>
         <p style="font-weight: 200;">{{article.title}}</p>
       </ion-label>
@@ -35,3 +35,9 @@
 
 
 </ion-content>
+
+<ion-fab class="buttonN" vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button routerLink="/home">
+     <ion-icon name="cloudy-night-outline"></ion-icon>
+  </ion-fab-button>
+ </ion-fab>
